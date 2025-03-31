@@ -49,7 +49,7 @@ jobs:
       with:
         languages: ${{ matrix.language }}
         build-mode: ${{ matrix.build-mode }}
-        queries: +./.ql/custom-c-queries/StrcpyUsage.ql, +./.ql/custom-c-queries/PrntFuncs.ql
+        queries: +./custom-queries
 
 
     - name: Install 32-bit build dependencies
