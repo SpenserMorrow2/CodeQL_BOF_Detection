@@ -54,7 +54,7 @@ jobs:
       if: matrix.language == 'c-cpp' && matrix.build-mode == 'manual'
       shell: bash
       run: |
-        gcc -m32 -fno-stack-protector -z execstack -no-pie -g -c 4-buffer_overflow.c
+        gcc -m32 -fno-stack-protector -z execstack -no-pie -g -c BOFvuln.c
 
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v3
