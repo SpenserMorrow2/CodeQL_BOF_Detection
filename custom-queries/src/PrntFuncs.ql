@@ -1,6 +1,7 @@
 /**
  * @name All function calls
  * @description Lists all function calls found in the codebase.
+ * @id custom.prnts
  * @kind problem
  * @problem.severity recommendation
  */
