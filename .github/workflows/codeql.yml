@@ -49,7 +49,8 @@ jobs:
       with:
         languages: ${{ matrix.language }}
         build-mode: ${{ matrix.build-mode }}
-        queries: +.ql/custom-c-queries
+        queries: +./.ql/custom-c-queries
+
 
     - name: Install 32-bit build dependencies
       if: matrix.language == 'c-cpp' && matrix.build-mode == 'manual'
