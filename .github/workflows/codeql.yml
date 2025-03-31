@@ -50,6 +50,12 @@ jobs:
         languages: ${{ matrix.language }}
         build-mode: ${{ matrix.build-mode }}
 
+    - name: Install 32-bit build dependencies
+      if: matrix.language == 'c-cpp' && matrix.build-mode == 'manual'
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y gcc-multilib libc6-dev-i386
+
     - name: Manual build for C/C++
       if: matrix.language == 'c-cpp' && matrix.build-mode == 'manual'
       shell: bash
