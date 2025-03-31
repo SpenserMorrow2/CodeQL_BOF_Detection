@@ -27,7 +27,7 @@ jobs:
       uses: actions/checkout@v4
 
     - name: Initialize CodeQL
-      uses: github/codeql-action/init@v2
+      uses: github/codeql-action/init@v3
       with:
         languages: ${{ matrix.language }}
 
@@ -36,4 +36,5 @@ jobs:
         gcc -m32 -fno-stack-protector -z execstack -no-pie -g -c 4-buffer_overflow.c
 
     - name: Perform CodeQL Analysis
-      uses: github/codeql-action/analyze@v2
+      uses: github/codeql-action/analyze@v3
+
