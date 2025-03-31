@@ -1,6 +1,7 @@
 /**
  * @name Use of strcpy (unsafe)
  * @description Detects calls to strcpy, which can cause buffer overflows.
+ * @id custom.strcpy-usage
  * @kind problem
  * @problem.severity warning
  */
